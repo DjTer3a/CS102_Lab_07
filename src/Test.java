@@ -1,8 +1,21 @@
+/**
+ * Lab_07 Instructions found on moodle
+ * 
+ * Style guidlines URL:-
+ * http://www.cs.bilkent.edu.tr/~adayanik/cs101/practicalwork/styleguidelines.htm
+ * 
+ * 
+ * @author Mostafa Higazy
+ * @version 30/07/2021
+ */
+
+//tester class
 public class Test {
     public static void main(String[] args) {
         
         SimpleLinkedList linkedList= new SimpleLinkedList();
         
+        System.out.println("Part c");
         linkedList.addToHead("6");
         System.out.println(linkedList);
         linkedList.addToHead("1");
@@ -33,9 +46,9 @@ public class Test {
         System.out.println(linkedList.get(8).getNode());
 
 
+        System.out.println("Part d");
         SimpleQueue2 queue = new SimpleQueue2();
         SimpleQueue2 queue2 = new SimpleQueue2();
-        
         queue.enqueue("1");
         System.out.println(queue.toString());
         queue.enqueue("2");
@@ -53,7 +66,7 @@ public class Test {
         System.out.println(queue.toString());
         System.out.println(queue2.toString());
 
-
+        System.out.println("Part e");
         SimpleStackWithQueue stack1=new SimpleStackWithQueue();
         System.out.println("The following value is added : "+stack1.push("1"));
         System.out.println("The following value is added : "+stack1.push("2"));
@@ -73,7 +86,5 @@ public class Test {
         System.out.println("The following value is removed : "+stack1.pop());
         System.out.println("The following value is removed : "+stack1.pop());
         System.out.println(stack1.toString());
-
-        
     }
 }
