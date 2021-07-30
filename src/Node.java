@@ -1,5 +1,4 @@
 public class Node {
-    Node head;
     Node next;
     String string;
 

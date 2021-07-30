@@ -47,7 +47,8 @@ public class Test {
         queue.enqueue("5");
         System.out.println(queue.toString());
         queue.dequeue();
-        System.out.println(queue.toString());System.out.println("Is queue empty? "+ queue.isEmpty());
+        System.out.println(queue.toString());
+        System.out.println("Is queue empty? "+ queue.isEmpty());
         System.out.println("Is queue empty? "+ queue2.isEmpty());
         System.out.println(queue.toString());
         System.out.println(queue2.toString());

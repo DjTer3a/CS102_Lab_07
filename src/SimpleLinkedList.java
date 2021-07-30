@@ -11,7 +11,7 @@ public class SimpleLinkedList{
             return true;
         }
         else{
-            return true;
+            return false;
         }
     }
 
@@ -54,14 +54,16 @@ public class SimpleLinkedList{
 
         return currentNode;
     }
+    
 
-    public String removeFromHead(){
+    public Node removeFromHead(){
         Node temp = nodeList;
         if(temp == null){
             return null;
         }
         nodeList = nodeList.next;
-        return temp.toString();            
+        temp.next = null;
+        return temp;            
     }
 
     public Node get(int index){

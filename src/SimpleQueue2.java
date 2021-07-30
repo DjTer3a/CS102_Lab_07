@@ -12,10 +12,18 @@ public class SimpleQueue2 {
         queue.addToTail(data);
         return queue.nodeTail();
     }
+    public Node enqueueReverse(String data){
+        queue.addToHead(data);
+        return queue.nodeList;
+    }
 
     public Node dequeue(){
-        queue.removeFromHead();
-        return queue.get(0);
+       return  queue.removeFromHead();
+        
+    }
+
+    public int Length(){
+        return queue.Length();
     }
 
     public String toString(){
