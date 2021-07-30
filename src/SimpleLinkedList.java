@@ -4,7 +4,7 @@ public class SimpleLinkedList extends Node{
 
     public SimpleLinkedList(){
         super(null);
-        nodeList = new Node(null);
+        nodeList = null;
     }
 
     public boolean isEmpty(){
@@ -33,29 +33,33 @@ public class SimpleLinkedList extends Node{
     }
 
     public void addToTail(String data){
-        Node nodeToAdd = new Node(data);
-        Node currentNode = nodeList;
-        int counter = 0;
-        int counter2=0;
-        while(currentNode != null){
+        if(nodeList == null){
+            Node temp = new Node(data);
+            temp.next = null;
+            nodeList =temp;
+        }
+        else{
+            Node currentNode = nodeTail();
+            Node tail = new Node(data);
+            currentNode.next = tail;
+        }
+    }
+
+    public Node nodeTail(){
+        Node currentNode;
+        currentNode = nodeList;
+
+        while(currentNode.next != null){
             currentNode = currentNode.next;
-            counter++;
         }
 
-        nodeToAdd.next = currentNode;
-        currentNode = nodeToAdd;
-        while(counter <counter2){
-            nodeList = nodeList.next;
-            counter2++;
-        }
-        
-        nodeList = nodeToAdd;
+        return currentNode;
     }
 
     public String removeFromHead(){
         Node temp = nodeList;
         if(temp == null){
-            return "null";
+            return null;
         }
         nodeList = nodeList.next;
         return temp.toString();            
@@ -85,10 +89,6 @@ public class SimpleLinkedList extends Node{
         while(currentNode != null){
             out += currentNode.string + ", ";
             currentNode = currentNode.next;
-        }
-
-        if(currentNode == null){
-            out+= "null";
         }
             return out;
         
