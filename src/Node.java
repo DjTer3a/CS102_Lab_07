@@ -11,7 +11,7 @@ public class Node {
 
     public String getNode(){
         if(string == null){
-            return "null";
+            return null;
         }
         else{
             return string;

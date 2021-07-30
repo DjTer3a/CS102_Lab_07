@@ -1,9 +1,8 @@
 
-public class SimpleLinkedList extends Node{
+public class SimpleLinkedList{
     Node nodeList;
 
     public SimpleLinkedList(){
-        super(null);
         nodeList = null;
     }
 
